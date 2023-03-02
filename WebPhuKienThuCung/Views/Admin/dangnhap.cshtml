@@ -1,0 +1,109 @@
+﻿@model WebPhuKienThuCung.Models.DangNhapModel
+@{
+    <title>Đăng Nhập Admin</title>
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Content/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <!--===============================================================================================-->
+
+</head>
+<body style="background-color: #666666;">
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+
+                @using (Html.BeginForm("dangnhap", "Admin", FormMethod.Post, htmlAttributes: new { @class = "login100-form validate-form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="login100-form-title-below p-b-43 m-b-20">
+                        <div style="font-size: 18px; font-family:DM Sans, sans-serif;">Tài khoản Admin - Nhân viên quản lý sản phẩm</div>
+                    </div>
+                    <span class="login100-form-title p-b-43" style="color: #e55945; font-family: DM Sans, sans-serif;">
+                        ĐĂNG NHẬP
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" name="tendn">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Tài khoản</span>
+                    </div>
+                    <div class="flex-sb-m w-full p-t-3 p-b-5">
+                        @Html.ValidationMessageFor(model => model.tendn, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="password" name="matkhau">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Mật khẩu</span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-t-3 p-b-5">
+                        @Html.ValidationMessageFor(model => model.matkhau, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="text-danger m-b-10" style="font-family: DM Sans, sans-serif;">  
+                        @ViewBag.ThongBao
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" style="font-family: DM Sans, sans-serif;">
+                            Đăng nhập
+                        </button>
+                    </div>
+                }
+
+                <div class="login100-more" style="background-image: url('/Content/images/pet-shop-sai-gon-1.jpg');">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/Content/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/js/main.js"></script>
+
+</body>
+</html>

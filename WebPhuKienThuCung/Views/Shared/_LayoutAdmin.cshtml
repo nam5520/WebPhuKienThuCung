@@ -1,0 +1,321 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.title</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets_1/images/header_logo.png" />
+    <link rel="stylesheet" href="~/assets_1/css/backend-plugin.min.css">
+    <link rel="stylesheet" href="~/assets_1/css/backend.css?v=1.0.2">
+    <link rel="stylesheet" href="~/assets_1/vendor/fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/assets_1/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="~/assets_1/vendor/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="~/assets_1/vendor/icon/dripicons/dripicons.css">
+</head>
+<body class="  ">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+
+        <div class="iq-sidebar  sidebar-default ">
+            <div class="iq-sidebar-logo d-flex align-items-center justify-content-between" style="display: flex">
+                <a href="@Url.Action("index","Admin")" class="header-logo">
+                    <img src="~/assets_1/images/logopaddy.png" class="img-fluid  light-logo" alt="logo" style="height: 50px; width: 120px;">
+                </a>
+                <div class="iq-menu-bt-sidebar ">
+                    <svg class="svg-icon feather feather-repeat wrapper-menu animated rotation" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="17 1 21 5 17 9"></polyline>
+                        <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                        <polyline points="7 23 3 19 7 15"></polyline>
+                        <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="data-scrollbar" data-scroll="1">
+                <nav class="iq-sidebar-menu">
+                    <ul id="iq-sidebar-toggle" class="iq-menu">
+                        <li class="">
+                            <a href="@Url.Action("index","Admin")" class="svg-icon">
+                                <svg class="svg-icon feather feather-home" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <span class="ml-3">Trang chủ</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-campaigns.html" class="">
+                                <svg class="svg-icon feather feather feather-send" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                <span class="ml-3">Trang người dùng</span>
+                            </a>
+                            <ul id="campaigns" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="@Url.Action("listadmin","Admin")" class="">
+                                <svg class="svg-icon feather feather feather-users" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span class="ml-3">Admin</span>
+                            </a>
+                            <ul id="contacts" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-forms.html" class="">
+                                <svg class="svg-icon feather feather-file-minus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="9" y1="15" x2="15" y2="15"></line>
+                                </svg>
+                                <span class="ml-3">Đơn đặt hàng</span>
+                            </a>
+                            <ul id="forms" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-templates.html" class="">
+                                <svg class="svg-icon feather feather-file" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                    <polyline points="13 2 13 9 20 9"></polyline>
+                                </svg>
+
+                                <span class="ml-3">Thương hiệu</span>
+                            </a>
+                            <ul id="templates" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+
+                                <svg class="svg-icon feather feather-file" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM6 8a6 6 0 1 1 12 0A6 6 0 0 1 6 8zm2 10a3 3 0 0 0-3 3 1 1 0 1 1-2 0 5 5 0 0 1 5-5h8a5 5 0 0 1 5 5 1 1 0 1 1-2 0 3 3 0 0 0-3-3H8z" fill="#0D0D0D" />
+                                </svg>
+
+                                <span class="ml-3">Khánh hàng</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-integration.html" class="">
+                                <svg class="svg-icon feather feather-file" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 12h-1.793L10 10.293V6.5L9.5 6H8V4h.5l.5-.5v-2L8.5 1h-2l-.5.5v2l.5.5H7v2H5.5l-.5.5v3.793L3.293 12H1.5l-.5.5v2l.5.5h2l.5-.5v-1.793L5.707 11h3.586L11 12.707V14.5l.5.5h2l.5-.5v-2l-.5-.5zM7 2h1v1H7V2zM6 7h3v3H6V7zm-3 7H2v-1h1v1zm10 0h-1v-1h1v1z" /></svg>
+                                <span class="ml-3">Loại sản phẩm</span>
+                            </a>
+                            <ul id="integration" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13V2a6 6 0 1 1 0 12z" />
+                                </svg>
+                                <span class="ml-3">Màu sắc</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M 27.5781 45.2969 C 28.7500 45.2969 29.3594 44.8281 29.8047 43.5391 L 32.8281 35.2422 L 46.6564 35.2422 L 49.6564 43.5391 C 50.1248 44.8281 50.7109 45.2969 51.8826 45.2969 C 53.1484 45.2969 53.9922 44.5469 53.9922 43.3750 C 53.9922 42.9766 53.8986 42.6250 53.7344 42.1094 L 42.7187 12.8594 C 42.1797 11.4063 41.2187 10.7031 39.7422 10.7031 C 38.2656 10.7031 37.3047 11.4063 36.7890 12.8359 L 25.7734 42.1328 C 25.5859 42.6484 25.5390 43.0000 25.5390 43.3984 C 25.5390 44.5703 26.3125 45.2969 27.5781 45.2969 Z M 33.9765 31.6563 L 39.6484 15.8828 L 39.7890 15.8828 L 45.4842 31.6563 Z M 4.0234 45.2969 C 4.9609 45.2969 5.6172 44.8281 6.0390 43.6094 L 7.9141 38.1953 L 16.4922 38.1953 L 18.3672 43.6094 C 18.7890 44.8516 19.4453 45.2969 20.4062 45.2969 C 21.5781 45.2969 22.3984 44.5469 22.3984 43.4453 C 22.3984 43.0469 22.3281 42.6250 22.0937 42.0391 L 15.1094 23.4766 C 14.6172 22.1172 13.6563 21.2500 12.1797 21.2500 C 10.7265 21.2500 9.7890 22.1172 9.2968 23.4766 L 2.2890 42.0391 C 2.0781 42.6250 2.0078 43.0469 2.0078 43.4453 C 2.0078 44.5469 2.8047 45.2969 4.0234 45.2969 Z M 8.9687 35.0078 L 12.0390 25.8672 L 12.3437 25.8672 L 15.4375 35.0078 Z" />
+                                </svg>
+                                <span class="ml-3">Kích thước</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22,7.82a1.25,1.25,0,0,0,0-.19v0h0l-2-5A1,1,0,0,0,19,2H5a1,1,0,0,0-.93.63l-2,5h0v0a1.25,1.25,0,0,0,0,.19A.58.58,0,0,0,2,8H2V8a4,4,0,0,0,2,3.4V21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V11.44A4,4,0,0,0,22,8V8h0A.58.58,0,0,0,22,7.82ZM13,20H11V16h2Zm5,0H15V15a1,1,0,0,0-1-1H10a1,1,0,0,0-1,1v5H6V12a4,4,0,0,0,3-1.38,4,4,0,0,0,6,0A4,4,0,0,0,18,12Zm0-10a2,2,0,0,1-2-2,1,1,0,0,0-2,0,2,2,0,0,1-4,0A1,1,0,0,0,8,8a2,2,0,0,1-4,.15L5.68,4H18.32L20,8.15A2,2,0,0,1,18,10Z" />
+                                </svg>
+                                <span class="ml-3">Kho sản phẩm</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6.5,22 C4.01471863,22 2,19.9852814 2,17.5 C2,15.0147186 4.01471863,13 6.5,13 C8.98528137,13 11,15.0147186 11,17.5 C11,19.9852814 8.98528137,22 6.5,22 Z M17.5,22 C15.0147186,22 13,19.9852814 13,17.5 C13,15.0147186 15.0147186,13 17.5,13 C19.9852814,13 22,15.0147186 22,17.5 C22,19.9852814 19.9852814,22 17.5,22 Z M6.5,11 C4.01471863,11 2,8.98528137 2,6.5 C2,4.01471863 4.01471863,2 6.5,2 C8.98528137,2 11,4.01471863 11,6.5 C11,8.98528137 8.98528137,11 6.5,11 Z M17.5,11 C15.0147186,11 13,8.98528137 13,6.5 C13,4.01471863 15.0147186,2 17.5,2 C19.9852814,2 22,4.01471863 22,6.5 C22,8.98528137 19.9852814,11 17.5,11 Z M17.5,9 C18.8807119,9 20,7.88071187 20,6.5 C20,5.11928813 18.8807119,4 17.5,4 C16.1192881,4 15,5.11928813 15,6.5 C15,7.88071187 16.1192881,9 17.5,9 Z M6.5,9 C7.88071187,9 9,7.88071187 9,6.5 C9,5.11928813 7.88071187,4 6.5,4 C5.11928813,4 4,5.11928813 4,6.5 C4,7.88071187 5.11928813,9 6.5,9 Z M17.5,20 C18.8807119,20 20,18.8807119 20,17.5 C20,16.1192881 18.8807119,15 17.5,15 C16.1192881,15 15,16.1192881 15,17.5 C15,18.8807119 16.1192881,20 17.5,20 Z M6.5,20 C7.88071187,20 9,18.8807119 9,17.5 C9,16.1192881 7.88071187,15 6.5,15 C5.11928813,15 4,16.1192881 4,17.5 C4,18.8807119 5.11928813,20 6.5,20 Z" />
+                                </svg>
+                                <span class="ml-3">Sản phẩm</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14H5v-2h6v2zm8-4H5v-2h14v2zm0-4H5V7h14v2z" />
+                                </svg>
+                                <span class="ml-3">Hình ảnh mô tả</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path fill="none" stroke="#000" stroke-width="2" d="M2,5.5 L2,18.5 L12,22.5 L22,18.5 L22,5.5 L12,1.5 L2,5.5 Z M13,12 L18,12 L18,17 M2,5.5 L12,9.5 L22,5.5 M6,14 C6,14 12,20.5 18,12" />
+                                </svg>
+                                <span class="ml-3">Phân quyền</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/page-activity.html" class="">
+                                <svg class="feather feather-activity" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                                <span class="ml-3">Thống kê</span>
+                            </a>
+                            <ul id="activity" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="p-3"></div>
+            </div>
+        </div>       <div class="iq-top-navbar">
+            `<div class="iq-navbar-custom">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+                    <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
+                        <i class="ri-menu-line wrapper-menu"></i>
+                        <a href="index.html" class="header-logo">
+                            <img src="../assets_1/images/logo.png" class="img-fluid  light-logo" alt="logo" />
+                        </a>
+                        <div class="navbar-breadcrumb">
+                            <h4>@ViewBag.trang</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                                <i class="ri-menu-3-line"></i>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto navbar-list align-items-center">
+                                    <li class="nav-bar-item-head">
+                                        @{ var ad = @Session["Taikhoanadmin"] as WebPhuKienThuCung.Models.ADMIN;}
+                                        <h1 class="" style="font-size: 20px">Xin chào @ad.HOTEN</h1>
+                                    </li>
+                                    <li class="nav-item nav-icon dropdown">
+                                        <a href="#" class="search-toggle iq-user-toggle dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="../assets_1/images/user/@ad.AVATAR" class="img-fluid rounded-small" alt="user">
+                                        </a>
+                                        <div class="iq-sub-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="card mb-0">
+
+                                                <div class="card-body p-0">
+                                                    <div class="profile-header">
+                                                        <div class="profile-details">
+                                                            <a href="../app/user-profile.html" class="iq-sub-card">
+                                                                <div class="rounded bg-info iq-card-icon-small">
+                                                                    <i class="ri-file-user-line"></i>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <h5 class="mb-0">Tên người dùng:</h5>
+                                                                    <p class="mb-0 font-size-14">@ad.HOTEN</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="profile-details">
+                                                            <a href="../app/user-profile-edit.html" class="iq-sub-card">
+                                                                <div class="rounded bg-success iq-card-icon-small">
+                                                                    <i class="ri-profile-line"></i>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <h5 class="mb-0">Thay đổi thông tin</h5>
+                                                                    <p class="mb-0 font-size-14">Cập nhật thông tin thường xuyên</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="profile-details">
+                                                            <a href="../app/user-account-setting.html" class="iq-sub-card">
+                                                                <div class="rounded bg-danger iq-card-icon-small">
+                                                                    <i class="ri-account-box-line"></i>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <h5 class="mb-0">Email:</h5>
+                                                                    <p class="mb-0 font-size-14">@ad.EMAIL</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+
+                                                        <div class="profile-details">
+                                                            <a href="../app/user-privacy-setting.html" class="iq-sub-card border-none">
+                                                                <div class="rounded bg-warning iq-card-icon-small">
+                                                                    <i class="ri-lock-line"></i>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <h5 class="mb-0">Đổi mật khẩu hiện tại</h5>
+                                                                    <p class="mb-0 font-size-14">Yêu cầu mật khẩu mạnh hơn</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <a class="right-ic btn btn-primary btn-block   position-relative iq-logout" href="@Url.Action("dangnhap","Admin")" role="button">
+
+                                                        Đăng xuất
+                                                    </a>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+                     <div class="content-page">
+                         @RenderBody()
+                     </div>
+    </div>
+    <!-- Backend Bundle JavaScript -->
+    <script src="~/assets_1/js/backend-bundle.min.js"></script>
+
+    <!-- Table Treeview JavaScript -->
+    <script src="~/assets_1/js/table-treeview.js"></script>
+
+    <!-- SweetAlert JavaScript -->
+    <script src="~/assets_1/js/sweetalert.js"></script>
+
+    <!-- Vectoe Map JavaScript -->
+    <script src="~/assets_1/js/vector-map-custom.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script src="~/assets_1/js/chart-custom.js"></script>
+
+    <!-- slider JavaScript -->
+    <script src="~/assets_1/js/slider.js"></script>
+
+    <!-- app JavaScript -->
+    <script src="~/assets_1/js/app.js"></script>
+</body>
+</html>

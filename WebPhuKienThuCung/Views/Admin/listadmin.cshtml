@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebPhuKienThuCung.Models.ADMIN>
+@{
+    ViewBag.Title = "Danh sách quản trị viên";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="table2" class="table-editable">
+                        @*<span class="table-add float-right mb-3 mr-2">
+            <button class="btn btn-sm bg-primary">
+                <i class="ri-add-fill"><span class="pl-1">Thêm quản trị viên</span></i>
+            </button>
+        </span>*@
+                        <table class="table table-bordered table-responsive-md table-striped text-center" style="font-size:12px">
+                            <thead>
+                                <tr>
+                                    <th>Họ tên</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Loại tài khoản</th>
+                                    <th>Tên đang nhập</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Email</th>
+                                    <th>Điều chỉnh</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="hide">
+                                        <td>@Html.DisplayFor(modelItem => item.HOTEN)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.DIACHI)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.DIENTHOAI)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.TENLOAI)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.TENDN)</td>
+                                        <td><img src="@Url.Content("~/assets_1/images/user/" + item.AVATAR)" height="60" width="60" /></td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.EMAIL)
+                                        </td>
+                                        <td>
+                                            <span class="table-remove">
+                                                <button type="button"
+                                                        class="btn bg-danger-light btn-rounded btn-sm my-0" style="font-size:14px">
+                                                    Sửa
+                                                </button>
+                                                <button type="button"
+                                                        class="btn bg-danger-light btn-rounded btn-sm my-0" style="font-size:14px">
+                                                    Xóa
+                                                </button>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
